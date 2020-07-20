@@ -6,12 +6,12 @@
 		public MathsManiaDatabase(String connectionString)
 		{
 			this.ConnectionString = connectionString;
-			var mathsManiaSqlStatements = new MathsManiaSqlStatements();
+			var sqlStatements = new MathsManiaSqlStatements();
 			//
 			//	repositories
 			//
-			this.UserAccountRepository = new UserAccountRepositoryComponent(this, mathsManiaSqlStatements);
-			this.UserGroupRepository = new UserGroupRepositoryComponent(this, mathsManiaSqlStatements);
+			this.UserAccountRepository = new UserAccountRepositoryComponent(this, sqlStatements);
+			this.UserGroupRepository = new UserGroupRepositoryComponent(this, sqlStatements);
 		}
 		#region Public Properties
 		#endregion
